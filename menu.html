@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            border:2px solid black;
+            height: 300px;
+            display: grid;
+            grid-template-columns:auto 100px auto;
+            grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+            grid-column-gap: 2px;
+            grid-row-gap: 2px;
+            /* display: flex; */
+            /* justify-content: center; */
+        }
+        .green {
+            border: 2px solid rgb(41, 222, 41);
+            background-color:rgb(172, 241, 172) ;
+        }
+        .yellow {
+            border: 2px solid rgb(225, 233, 75);
+            background-color:rgb(246, 238, 92) ;
+        }
+        .red {
+            border: 2px solid rgb(245, 126, 93);
+            background-color:rgb(240, 166, 154) ;
+        }
+        .blue {
+            border: 2px solid rgb(164, 112, 248);
+            background-color:rgb(200, 193, 239) ;
+        }
+       #green{
+        grid-column-start: 1;
+            grid-column-end: 4;
+            /* grid-row-start:1 ;
+            grid-row-end: 4; */
+       }
+       #yellow{
+        grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start:2;
+            grid-row-end: 5;
+       }
+       #red{
+        grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start:2;
+            grid-row-end: 4;
+       }
+       #blue{
+        grid-column-start: 2;
+            grid-column-end: 4;
+            /* grid-row-start:1 ;
+            grid-row-end: 4; */
+       }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="green child" id="green">green</div>
+        <div class="yellow child" id="yellow">yellow</div>
+        <div class="red child" id="red">red</div>
+        <div class="blue child" id="blue">blue</div>
+    </div>
+</body>
+</html>

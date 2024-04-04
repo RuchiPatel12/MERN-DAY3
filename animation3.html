@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation3</title>
+    <style>
+        .box{
+            width: 700px;
+            height: 150px;
+            border: 2px solid blue;
+            margin:50px auto;
+            position: relative;
+        }
+        .box2{
+            width: 200px;height: 65px;
+            margin-top: 20px;
+            background-color: red;
+            color: yellow;
+            position: absolute;
+            font-size: 25px;
+            text-align: center;
+            padding-top: 35px;
+            top: 0px;left: 0px;
+            /*animation: box2 5s;*/
+            animation-name: box2;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-direction: normal;/* or reverse,alternate,alternate-reverse*/
+            animation-iteration-count: 4;
+            animation-timing-function: linear;/*
+            animation-timing-function: ease;  (slow fast slow)
+            animation-timing-function: ease-in;(slow fast)
+            animation-timing-function: ease-in-out;(slow fast slow)
+            animation-timing-function: out;(fast slow)
+            animation-timing-function: ease-in-out;*/
+        }
+        @keyframes box2{
+            from{
+                left: 0px;
+            }
+            to{
+                left: 500px;
+            }
+    
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box2"> WELCOME</div>
+    </div>
+</body>
+</html>
